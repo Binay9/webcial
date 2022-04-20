@@ -6,7 +6,7 @@ import { Pets, Mail, Notifications } from '@mui/icons-material';
 const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent: "space-between"
-})
+});
 
 const Search = styled(Box)(({ theme }) => ({
     backgroundColor: "white",
@@ -14,6 +14,10 @@ const Search = styled(Box)(({ theme }) => ({
     borderRadius: theme.shape.borderRadius,
     width: "40%"
 }));
+
+const LongInputBase = styled(InputBase)({
+    width:"100%"
+});
 
 const Icons = styled(Box)(({ theme }) => ({
     display: "none", alignItems: "center", gap: "20px",
@@ -41,7 +45,7 @@ function Navbar() {
                     Webcial
                 </Typography>
                 <Pets sx={{ display: { xs: "block", sm: "none" } }} />
-                <Search><InputBase placeholder="Search..." /></Search>
+                <Search><LongInputBase placeholder="Search..." /></Search>
                 <Icons>
                     <Mail />
                     <Notifications />
