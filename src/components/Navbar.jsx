@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AppBar, styled, Box, Toolbar, Typography, InputBase, Avatar, Menu, MenuItem } from '@mui/material';
 import { Pets, Mail, Notifications } from '@mui/icons-material';
+import user from '../Images/User.jpg';
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -49,12 +50,12 @@ function Navbar() {
                 <Icons>
                     <Mail />
                     <Notifications />
-                    <Avatar sx={{ width: 30, height: 30 }}
+                    <Avatar src={user} sx={{ width: 30, height: 30 }}
                         onClick={(e) => setOpen(true)}
                     />
                 </Icons>
                 <UserBox onClick={(e) => setOpen(true)}>
-                    <Avatar sx={{ width: 30, height: 30 }} />
+                    <Avatar src={user} sx={{ width: 30, height: 30 }} />
                     <Typography variant="span">Sam</Typography>
                 </UserBox>
                 <Menu
