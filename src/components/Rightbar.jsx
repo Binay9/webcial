@@ -9,7 +9,7 @@ import nature from '../Images/Nature.jpg'
 
 const Rightbar = () => {
     return (
-        <Box bgcolor="lightblue" flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+        <Box bgcolor={"background.default"} color={"text.primary"} flex={2} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
             <Box position="fixed" width={300} align-items="center">
                 <Typography variant="h6" fontWeight={100} mb={1}>Online Friends</Typography>
                 <AvatarGroup max={7}>

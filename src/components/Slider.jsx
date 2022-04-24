@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Switch } from '@mui/material';
 import { Home, Instagram, Settings, AccountBox, ModeNight } from '@mui/icons-material';
 
-const Slider = () => {
+const Slider = ({setMode, mode}) => {
     return (
         <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
             <Box position="fixed">
@@ -42,9 +42,9 @@ const Slider = () => {
                     <ListItem disablePadding>
                         <ListItemButton component="a" href="#mode">
                             <ListItemIcon>
-                                <ModeNight />
+                                <ModeNight/>
                             </ListItemIcon>
-                            <Switch />
+                            <Switch onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}/>
                         </ListItemButton>
                     </ListItem>
                 </List>
